@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniDevs - Turmas</title>
+    <link rel="stylesheet" href="style.css"> <!-- Inclua um arquivo CSS separado, se necessário -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em; /* Aumenta o tamanho do título */
+            color: #333; /* Cor do texto do título */
+        }
+
+        .turmas-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px; /* Espaço abaixo do container */
+        }
+
+        .turmas-container button {
+            background-color: #007BFF; /* Cor azul */
+            color: white; /* Cor do texto */
+            border: none; /* Remove borda */
+            padding: 10px 20px; /* Espaçamento interno */
+            font-size: 1.2em; /* Aumenta o tamanho da fonte do botão */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        table {
+            width: 100%; /* Tabela ocupa 100% da largura */
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button-container {
+            margin-top: 20px; /* Espaço acima do botão de voltar */
+            text-align: center; /* Centraliza o botão de voltar */
+        }
+    </style>
+</head>
+<body>
+    <div class="turmas-container">
+        <h1>UniDevs</h1>
+        <button type="button" onclick="window.location.href='criarTurma.html'">Criar Nova Turma</button>
+    </div>
+    
+    <h2 style="text-align: center;">Turmas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Período</th>
+                <th>ID do Professor</th>
+            </tr>
+        </thead>
+        <tbody id="turmasTableBody">
+            <!-- As linhas da tabela serão inseridas aqui via JavaScript -->
+        </tbody>
+    </table>
+    
+    <div class="button-container">
+        <button type="button" onclick="window.location.href='inicio.html'">Voltar para Início</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="showTurmas.js"></script> <!-- Importa seu arquivo showTurmas.js -->
+    <script>
+        window.onload = showTurmas; // Chama a função showTurmas ao carregar a página
+    </script>
+</body>
+</html>

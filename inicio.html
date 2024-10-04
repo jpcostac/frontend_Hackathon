@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniDevs - Início</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+    <style>
+        * {
+            box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Preenche toda a altura da tela */
+            margin: 0; /* Remove a margem padrão do body */
+            font-family: 'Roboto', sans-serif; /* Fonte do projeto */
+        }
+
+        fieldset {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Largura do fieldset */
+        }
+
+        h1 {
+            margin-bottom: 10px; /* Espaço abaixo do título */
+        }
+
+        p {
+            margin: 5px 0; /* Espaço entre as mensagens */
+            font-size: 16px; /* Tamanho da fonte das mensagens */
+            color: #333; /* Cor do texto das mensagens */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        button {
+            width: 100%; /* Botões ocupam toda a largura */
+            padding: 10px; /* Para botões maiores */
+            font-size: 16px; /* Tamanho da fonte dos botões */
+            margin-bottom: 10px; /* Espaço entre os botões */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        }
+
+        .btnVer {
+            background-color: #4CAF50; /* Cor do botão "Ver Turmas" */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Remove borda */
+        }
+
+        .Sair {
+            background-color: #f44336; /* Cor do botão "Sair" */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Remove borda */
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <div style="text-align: center;">
+            <h1>UniDevs</h1>
+            <p>Bem-vindo, Professor</p>
+            <p>Escolha uma opção</p>
+            <button type="button" id="verTurmas" class="btnVer" onclick="window.location.href='turmas.html'">Ver Turmas</button>  
+            <button type="button" id="cadastrar" class="btn" onclick="window.location.href='atividades.html'">Ver Atividades</button>
+        </div>
+        <div style="text-align: right;">
+            <button type="button" id="sair" class="Sair" onclick="window.location.href='login.html'">Sair</button>
+        </div>
+    </fieldset>
+</body>
+</html>

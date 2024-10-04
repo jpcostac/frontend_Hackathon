@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniDevs - Update Adividade</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+    <style>
+        * {
+            box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Preenche toda a altura da tela */
+            margin: 0; /* Remove a margem padrão do body */
+            font-family: 'Roboto', sans-serif; /* Fonte do projeto */
+        }
+
+        fieldset {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Largura do fieldset */
+        }
+
+        .form-control {
+            width: 100%; /* Faz os inputs ocuparem toda a largura do fieldset */
+            padding: 10px; /* Espaçamento interno */
+            font-size: 16px; /* Aumenta o tamanho da fonte */
+            margin-bottom: 15px; /* Espaço entre os inputs */
+        }
+
+        .button-container {
+            text-align: center; /* Centraliza o botão */
+        }
+
+        button {
+            padding: 10px 20px; /* Para botões maiores */
+            font-size: 16px; /* Tamanho da fonte dos botões */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        }
+    </style> 
+</head>
+<body>
+    <fieldset>
+        <div style="text-align: center;">
+            <h1>Modificar informações</h1>
+            <form action="" method="post">
+                <input type="text" placeholder="Digite o nome da Atividade" class="form-control" id="inputName" required>
+                <input type="text" placeholder="Digite a descrição" class="form-control" id="inputDescricao" required>
+                <input type="date" placeholder="Digite a data de entrega" class="form-control" id="inputDate" required>
+                <input type="number" placeholder="Digite o peso da nota" class="form-control" id="inputPeso" required>
+                <div class="button-container">
+                    <button type="button" id="button-page-init" class="btn" onclick="updateAtividade()">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</body>
+</html>

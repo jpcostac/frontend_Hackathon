@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidevs- Login</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        fieldset {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            width: 500px;
+        }
+
+        .form-control{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        
+    </style> 
+</head>
+<body>
+    <fieldset>
+        <header id="header-container" style="text-align: center;">
+            <h1>Login</h1>             
+        </header>
+        <main id="container" class="d-flex align-items-center">
+            <form action="" method="post">
+                <div>
+                    <label for="inputEmail"></label>
+                    <input type="email" placeholder="Digite seu E-mail" class="form-control" id="inputEmail" required>
+                </div>
+                <div>
+                    <label for="inputPassword"></label>
+                    <input type="password" placeholder="Digite sua Senha" class="form-control" id="inputPassword" required>
+                    <br>
+                </div>
+                <div>
+                    <input type="checkbox" id="scales" name="scales"/>
+                    <label for="scales">Não sou um robô</label>
+                </div>
+                <a href="recuperarsenha.html" id= "esqueci" class="link-esqueci">Esqueci minha Senha</a>
+                <div class="button-container">
+                    <button type="button" id="ntrar" class="btn" onclick="saveLogin()">Entrar</button><!--Entrar tem que ir para o campo de autenticacao(), validar as credenciais de acesso-->
+                    <button type="button" id="cadastrar" class="btn" onclick="window.location.href='cadastro.html'">Cadastrar</button><!--Tem que ir para a tela de criar usuario-->
+                </div>
+            </form>
+        </main>
+    </fieldset>
+</body>
+</html>
